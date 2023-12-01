@@ -1,0 +1,10 @@
+version: '3.9'
+services:
+
+  ubuntu-xpra:
+    build: .
+    ports:
+      - 9876:9876
+    volumes:
+      - ./supervisord.conf:/etc/supervisor/conf.d/supervisord.conf
+      - ./data/logs:/workspace/logs
